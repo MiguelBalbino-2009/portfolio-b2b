@@ -1,0 +1,226 @@
+nav {
+    width: 100%;
+    max-width: var(--max-width-nav, 110rem);
+    margin: 1.2rem auto;
+    padding: 0.8rem 1.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--blue-gray-800);
+    border-radius: 2rem;
+
+    position: relative;
+    z-index: 100;
+}
+
+/* Logo */
+nav a.logo {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+/* Links gerais */
+nav a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* ===================================================
+   BOTÃO HAMBÚRGUER
+=================================================== */
+
+nav button.menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+}
+
+nav button.menu-toggle:hover {
+    transform: scale(1.08);
+}
+
+nav .menu-toggle img {
+    width: 4.8rem;
+    height: 4.8rem;
+}
+
+/* ===================================================
+   MENU MOBILE
+=================================================== */
+
+.nav-menu {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    padding: 2rem;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    background-color: var(--blue-gray-800);
+
+    border-radius: 0 0 2rem 2rem;
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.25);
+
+    z-index: 99;
+}
+
+/* Menu aberto pelo JavaScript */
+.nav-menu.active {
+    display: flex;
+}
+
+/* ===================================================
+   LINKS
+=================================================== */
+
+.nav-links {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu a {
+    display: inline-block;
+
+    padding: 0.8rem 1rem;
+
+    font-size: 1.6rem;
+
+    border-bottom: 0.2rem solid transparent;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--white);
+    border-bottom-color: var(--purple-400);
+}
+
+/* ===================================================
+   AÇÕES
+=================================================== */
+
+.nav-actions {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.nav-actions .btn-join {
+    width: 100%;
+    max-width: 16rem;
+
+    padding: 1.2rem;
+
+    background-color: var(--purple-600);
+    color: var(--white);
+
+    border: none;
+    border-radius: 0.8rem;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.nav-actions .btn-join:hover {
+    background-color: var(--purple-800);
+    transform: translateY(-0.2rem);
+}
+
+/* ===================================================
+   DESKTOP — 768px+
+=================================================== */
+
+@media (min-width: 768px) {
+
+    /* Esconde o hambúrguer */
+    nav button.menu-toggle {
+        display: none;
+    }
+
+    /* Menu passa a ficar dentro da navegação */
+    .nav-menu {
+        position: static;
+
+        display: flex !important;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        padding: 0;
+        margin-left: 3.8rem;
+
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    /* Links horizontais */
+    .nav-links {
+        width: auto;
+
+        flex-direction: row;
+        justify-content: flex-start;
+
+        gap: 1.6rem;
+    }
+
+    /* Botões horizontais */
+    .nav-actions {
+        width: auto;
+
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .nav-actions .btn-join {
+        width: 12.7rem;
+    }
+}
+
+/* ===================================================
+   AJUSTE DO MENU ABERTO NO MOBILE
+=================================================== */
+
+@media (max-width: 767px) {
+
+    nav:has(.nav-menu.active) {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+

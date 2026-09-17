@@ -1,0 +1,109 @@
+.tools {
+
+width: 100%;
+padding: var(--spacing-vertical) var(--spacing-horizontal);
+display: flex;
+justify-content: center;
+}
+.tools-container {
+max-width: 110rem;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+gap: 3.2rem;
+}
+/* --- MOCKUP DA IMAGEM --- */
+.tools-image {
+width: 100%;
+max-width: 48rem;
+display: flex;
+justify-content: center;
+}
+.tools-image img {
+width: 100%;
+height: auto;
+display: block;
+object-fit: contain;
+}
+/* --- CONTEÚDO DE TEXTO --- */
+.tools-content {
+width: 100%;
+max-width: 50rem;
+}
+/* Tag POWERFUL com detalhe da caixa laranja no mobile */
+.tools-tag {
+font-size: 2rem;
+font-weight: 700;
+letter-spacing: 0.2rem;
+color: var(--white, #ffffff);
+
+display: block;
+margin-bottom: 1.2rem;
+text-transform: uppercase;
+}
+.tools-tag .boxed-tag {
+font-weight: 700;
+letter-spacing: 0.2rem;
+color: var(--white, #ffffff);
+text-transform: uppercase;
+border: 0.2rem solid var(--orange-700, #ea580c); /* Moldura laranja
+*/
+padding: 0.4rem 0.8rem;
+display: inline-block;
+}
+.tools-title {
+font-size: 3.2rem;
+font-weight: 800;
+color: var(--white, #ffffff);
+line-height: 1.2;
+margin-bottom: 1.6rem;
+}
+.tools-description {
+font-size: 1.5rem;
+color: var(--blue-gray-300, #94a3b8);
+line-height: 1.6;
+margin: 0 auto;
+}
+/* ===================================================
+DESKTOP (768px+)
+=================================================== */
+@media (min-width: 768px) {
+.tools {
+padding: 6rem 2rem;
+}
+/* No Desktop: Layout Lado a Lado (Texto à esquerda, Imagem à
+direita) */
+.tools-container {
+flex-direction: row;
+
+justify-content: space-between;
+text-align: left;
+gap: 6rem;
+}
+/* Inverte a ordem no Flexbox para o texto vir primeiro no Desktop */
+.tools-content {
+order: 1;
+flex: 1;
+max-width: 48rem;
+}
+.tools-image {
+order: 2;
+flex: 1.2;
+max-width: 58rem;
+justify-content: flex-end;
+}
+/* Ajustes visuais da tag no Desktop */
+.tools-tag .boxed-tag {
+border: none; /* Remove a caixa no desktop conforme a img 1 */
+padding: 0;
+}
+.tools-title {
+font-size: 4.8rem;
+}
+.tools-description {
+font-size: 1.6rem;
+margin-left: 0;
+}
+}

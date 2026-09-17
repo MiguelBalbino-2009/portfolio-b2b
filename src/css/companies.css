@@ -1,0 +1,111 @@
+.companies {
+    width: 100%;
+    padding: var(--spacing-vertical) var(--spacing-horizontal);
+
+    display: flex;
+    justify-content: center;
+}
+
+.companies-container {
+    width: 100%;
+    max-width: 110rem;
+
+    text-align: center;
+}
+
+/* ===================================================
+   TÍTULO
+=================================================== */
+
+.companies-title {
+    margin-bottom: 3.2rem;
+
+    color: var(--white, #ffffff);
+
+    font-size: clamp(3rem, 6vw, 4rem);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+/* ===================================================
+   GRID DE EMPRESAS
+=================================================== */
+
+.companies-grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 2.4rem 3.2rem;
+}
+
+/* ===================================================
+   EMPRESA
+=================================================== */
+
+.company-item {
+    display: flex;
+    align-items: center;
+
+    gap: 0.8rem;
+
+    color: var(--white, #ffffff);
+
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    opacity: 0.85;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.company-item:hover {
+    opacity: 1;
+    transform: translateY(-0.2rem);
+}
+
+/* Logo da empresa */
+.company-item img {
+    width: auto;
+    height: 2.4rem;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+/* ===================================================
+   DESKTOP — 768px+
+=================================================== */
+
+@media (min-width: 768px) {
+
+    .companies {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    .companies-title {
+        font-size: 3.6rem;
+    }
+
+    .companies-grid {
+        gap: 3.2rem 5rem;
+    }
+}
+
+/* ===================================================
+   TELAS GRANDES — 1200px+
+=================================================== */
+
+@media (min-width: 1200px) {
+
+    .companies-grid {
+        gap: 3.2rem 7rem;
+    }
+}
+

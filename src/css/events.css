@@ -1,0 +1,229 @@
+/* ===================================================
+   EVENTS
+=================================================== */
+
+.events-section {
+    width: 100%;
+    padding: var(--spacing-vertical) var(--spacing-horizontal);
+
+    background-color: var(--white, #ffffff);
+    border-top: 0.6rem solid var(--purple-600, #9333ea);
+}
+
+.events-container {
+    width: 100%;
+    max-width: 110rem;
+    margin: 0 auto;
+}
+
+/* ===================================================
+   CABEÇALHO
+=================================================== */
+
+.events-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+
+    margin-bottom: 3.2rem;
+
+    text-align: center;
+}
+
+.events-title {
+    color: var(--blue-gray-900, #0f172a);
+    font-size: clamp(3.2rem, 7vw, 4rem);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.explore-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    color: var(--purple-600, #9333ea);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.explore-link:hover {
+    color: var(--purple-700, #7e22ce);
+    transform: translateX(0.4rem);
+}
+
+/* ===================================================
+   GRID DE EVENTOS
+=================================================== */
+
+.events-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+/* ===================================================
+   CARD DO EVENTO
+=================================================== */
+
+.event-card {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===================================================
+   IMAGEM
+=================================================== */
+
+.card-image-wrapper {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    margin-bottom: 1.6rem;
+
+    border-radius: 1.2rem;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover .card-image {
+    transform: scale(1.04);
+}
+
+/* ===================================================
+   BADGE
+=================================================== */
+
+.card-badge {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+
+    padding: 0.4rem 1rem;
+
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(0.4rem);
+
+    border-radius: 0.6rem;
+
+    color: var(--purple-700, #7e22ce);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* ===================================================
+   CONTEÚDO DO CARD
+=================================================== */
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-category {
+    margin-bottom: 0.6rem;
+
+    color: var(--blue-gray-600, #475569);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card-title {
+    margin-bottom: 1.6rem;
+
+    color: var(--blue-gray-900, #0f172a);
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+/* ===================================================
+   LINK DE INGRESSOS
+=================================================== */
+
+.buy-tickets-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    color: var(--purple-600, #9333ea);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.buy-tickets-link:hover {
+    color: var(--purple-700, #7e22ce);
+    transform: translateX(0.4rem);
+}
+
+.arrow {
+    font-size: 1.4rem;
+}
+
+/* ===================================================
+   TABLET / DESKTOP — 768px+
+=================================================== */
+
+@media (min-width: 768px) {
+
+    .events-section {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    .events-header {
+        flex-direction: row;
+        justify-content: space-between;
+
+        margin-bottom: 4rem;
+
+        text-align: left;
+    }
+
+    .events-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2.4rem;
+    }
+
+    .events-title {
+        font-size: 4rem;
+    }
+}
+
+/* ===================================================
+   TELAS GRANDES — 1200px+
+=================================================== */
+
+@media (min-width: 1200px) {
+
+    .events-grid {
+        gap: 3.2rem;
+    }
+}

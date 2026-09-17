@@ -1,0 +1,126 @@
+.footer {
+width: 100%;
+background-color: var(--white, #ffffff);
+padding: 4rem 2rem;
+color: var(--blue-gray-900, #0f172a);
+}
+.footer-container {
+max-width: 110rem; /* Largura perfeita para alinhar com o restante do
+site */
+margin: 0 auto;
+}
+/* --- GRID PRINCIPAL DO RODAPÉ --- */
+.footer-grid {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+gap: 3.2rem;
+}
+/* Logo */
+.brand-logo {
+font-size: 2.8rem;
+font-weight: 800;
+color: var(--blue-gray-900, #0f172a);
+text-decoration: none;
+letter-spacing: -0.04em;
+display: inline-block;
+}
+/* Colunas de Conteúdo */
+
+.footer-column {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.column-title {
+font-size: 1.2rem;
+font-weight: 700;
+color: var(--blue-gray-400, #94a3b8); /* Cinza suave da imagem */
+letter-spacing: 0.08em;
+margin-bottom: 1.6rem;
+text-transform: uppercase;
+}
+.column-list {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+gap: 1.2rem;
+}
+.column-list a {
+font-size: 1.4rem;
+color: var(--blue-gray-700, #334155);
+text-decoration: none;
+transition: color 0.2s ease;
+}
+.column-list a:hover {
+color: var(--blue-gray-900, #0f172a);
+}
+/* --- DIVISOR --- */
+.footer-divider {
+border: none;
+border-top: 1px solid var(--blue-gray-100, #f1f5f9);
+margin: 4rem 0 2.4rem 0;
+}
+/* --- SUB-RODAPÉ (COPYRIGHT + REDES SOCIAIS) --- */
+
+.footer-bottom {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 2rem;
+text-align: center;
+}
+.copyright {
+font-size: 1.3rem;
+color: var(--blue-gray-600, #475569);
+}
+.social-links {
+display: flex;
+align-items: center;
+gap: 1.8rem;
+}
+.social-links a {
+color: var(--purple-600);
+font-size: 1.6rem;
+text-decoration: none;
+transition: color 0.2s ease, transform 0.2s ease;
+}
+.social-links a:hover {
+color: var(--purple-800);
+transform: translateY(-2px);
+}
+/* ===================================================
+DESKTOP (768px+)
+=================================================== */
+@media (min-width: 768px) {
+.footer {
+padding: 6rem 4rem 4rem 4rem;
+}
+/* Layout em Grid com 5 colunas para o alinhamento ficar idêntico ao
+Figma */
+.footer-grid {
+display: grid;
+
+grid-template-columns: 2fr repeat(4, 1fr); /* 1 coluna maior pra
+marca e 4 iguais */
+gap: 2rem;
+text-align: left;
+align-items: start;
+}
+.footer-column {
+align-items: flex-start;
+}
+.brand-logo {
+margin-top: -0.4rem; /* Alinha o topo da logo com os títulos das
+colunas */
+}
+/* Alinhamento do rodapé inferior */
+.footer-bottom {
+flex-direction: row;
+justify-content: space-between;
+text-align: left;
+}
+}
